@@ -7,7 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-ng6-app';
+  clickTest = 'before click event';
   add(a, b) {
     return a + b;
+  }
+  cl() {
+    this.clickTest = 'after click event';
   }
 }
