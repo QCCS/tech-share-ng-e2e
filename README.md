@@ -12,3 +12,20 @@ ng new tech-share-ng-e2e
 先看单元测试
 
 git checkout -b share1
+
+跑几个命令
+
+ng serve
+ng test
+ng e2e
+
+可以看见脚手架自带的测试
+
+---
+
+然后写两个单元测试
+1.组件方法
+2.组件service
+
+git checkout -b share2
+
