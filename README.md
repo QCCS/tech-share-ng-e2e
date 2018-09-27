@@ -24,8 +24,14 @@ ng e2e
 ---
 
 然后写两个单元测试
-1.组件方法
-2.组件service
+1.组件方法 ：两个数相加
+2.组件service :数组排序
 
 git checkout -b share2
 
+ng test
+
+----
+
+然后写几个 e2e 测试
+git checkout -b share3
