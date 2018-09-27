@@ -48,3 +48,17 @@ ng e2e
 多写一个测试
 
 git checkout -b share4
+
+路由注意添加路由出口
+<router-outlet></router-outlet>
+这里直接放首页
+
+添加一个 login 组件
+当路由为 /login 的时候
+页面显示login 组件，
+然后获取此组件的内容
+
+测试演示完毕，更多 e2e 操作
+
+http://www.protractortest.org/#/
+

@@ -52,4 +52,11 @@ export class AppPage {
   }
 
 
+  navigateToTestLogin() {
+    return browser.get('/login');
+  }
+  getParagraphTextloginH4() {
+    return element(by.css('app-root .login-page')).getText();
+  }
+
 }

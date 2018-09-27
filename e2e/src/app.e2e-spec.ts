@@ -49,6 +49,10 @@ describe('workspace-project App', () => {
     expect(page.getParagraphTextClickedH4()).toEqual('after click event');
   });
 
+  it('login-page', () => {
+    page.navigateToTestLogin();
+    expect(page.getParagraphTextloginH4()).toEqual('login page');
+  });
 
 
 });
