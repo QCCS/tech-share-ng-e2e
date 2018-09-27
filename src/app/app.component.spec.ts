@@ -8,6 +8,11 @@ describe('AppComponent', () => {
       ],
     }).compileComponents();
   }));
+  it('期待函数等于3', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.add(1, 2)).toEqual(3);
+  }));
   it('should create the app', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
