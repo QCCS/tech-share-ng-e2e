@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginPageModule } from '../login/login.module';
@@ -9,6 +9,7 @@ import { LoginPageModule } from '../login/login.module';
     AppComponent
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     LoginPageModule
@@ -17,3 +18,4 @@ import { LoginPageModule } from '../login/login.module';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

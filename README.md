@@ -62,3 +62,32 @@ git checkout -b share4
 
 http://www.protractortest.org/#/
 
+但是这个时候因为多加了e2e测试，再次跑单元测试，报错
+需要在测试用例中添加
+```
+//这两个必须导入
+import { AppRoutingModule } from './app-routing.module';
+import { LoginPageModule } from '../login/login.module';
+//这个必须导入
+import { APP_BASE_HREF } from '@angular/common';
+```
+
+```
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        AppComponent
+      ],
+      providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+      imports: [AppRoutingModule,LoginPageModule], // <---
+    }).compileComponents();
+  }));
+```
+---
+
+演示完毕
+
+测试框架已经与 ng 脚手架集成，写起来就比较方便
+
+下面从0开始讲测试
+

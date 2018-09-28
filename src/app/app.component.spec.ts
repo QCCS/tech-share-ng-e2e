@@ -1,12 +1,20 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { AppService } from './app.service';
+//这两个必须导入
+import { AppRoutingModule } from './app-routing.module';
+import { LoginPageModule } from '../login/login.module';
+//这个必须导入
+import { APP_BASE_HREF } from '@angular/common';
 describe('AppComponent', () => {
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
+      providers: [{provide: APP_BASE_HREF, useValue: '/'}],
+      imports: [AppRoutingModule,LoginPageModule], // <---
     }).compileComponents();
   }));
   it('期待数组等于排序后的数组', async(() => {
